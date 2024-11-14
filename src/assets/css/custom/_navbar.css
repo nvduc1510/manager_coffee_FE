@@ -1,0 +1,25 @@
+
+
+header.nav-sticky {
+    @apply bg-white lg:shadow-md shadow-none dark:bg-default-50;
+}
+
+.menu .active {
+    color: theme(colors.primary.DEFAULT) !important;
+}
+
+.menu .hs-dropdown-menu {
+    .active {
+        @apply bg-default-200/50;
+    }
+}
+
+.admin-menu {
+    .active {
+        @apply !text-primary !bg-primary/10;
+    }
+
+    [data-hs-collapse].active {
+        @apply !text-default-700 !bg-default-200/50;
+    }
+}

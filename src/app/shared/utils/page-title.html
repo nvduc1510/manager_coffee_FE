@@ -1,0 +1,30 @@
+<section class="lg:flex items-center hidden bg-default-400/10 h-14">
+    <div class="container">
+        <div class="flex items-center">
+            <ol aria-label="Breadcrumb" class="flex items-center whitespace-nowrap min-w-0 gap-2">
+                <li class="text-sm">
+                    <a class="flex items-center gap-2 align-middle text-default-800 transition-all leading-none hover:text-primary-500" href="javascript:void(0)">
+                        <i class="w-4 h-4" data-lucide="home"></i>
+                        Home
+                        <i class="w-4 h-4" data-lucide="chevron-right"></i>
+                    </a>
+                </li>
+
+                {{#if subtitle}}
+                <li class="text-sm">
+                    <a class="flex items-center gap-2 align-middle text-default-800 transition-all leading-none hover:text-primary-500" href="javascript:void(0)">
+                        {{subtitle}}
+                        <i class="w-4 h-4" data-lucide="chevron-right"></i>
+                    </a>
+                </li>
+                {{/if}}
+
+                {{#if title}}
+                <li aria-current="page" class="text-sm font-medium text-primary truncate leading-none hover:text-primary-500">
+                    {{title}}
+                </li>
+                {{/if}}
+            </ol>
+        </div>
+    </div>
+</section>

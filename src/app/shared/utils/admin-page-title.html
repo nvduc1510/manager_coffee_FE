@@ -1,0 +1,24 @@
+<div class="flex items-center justify-between w-full mb-6">
+    {{#if title}}
+    <h4 class="text-xl font-medium">
+        {{title}}
+    </h4>
+    {{/if}}
+
+    <ol aria-label="Breadcrumb" class="hidden md:flex items-center whitespace-nowrap min-w-0 gap-2">
+        {{#if subtitle}}
+        <li class="text-sm">
+            <a class="flex items-center gap-2 align-middle text-default-800 transition-all leading-none hover:text-primary-500" href="javascript:void(0)">
+                {{subtitle}}
+                <i class="w-4 h-4" data-lucide="chevron-right"></i>
+            </a>
+        </li>
+        {{/if}}
+
+        {{#if title}}
+        <li aria-current="page" class="text-sm font-medium text-primary truncate leading-none hover:text-primary-500">
+            {{title}}
+        </li>
+        {{/if}}
+    </ol>
+</div>

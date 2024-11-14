@@ -1,0 +1,31 @@
+/*
+Template Name: Yum - Multipurpose Food Tailwind CSS Template
+Version: 1.0
+Author: coderthemes
+Email: support@coderthemes.com
+File: style Css File
+*/
+
+/* Plugin Base css */
+@import "swiper/swiper-bundle.css";
+@import "nouislider/dist/nouislider.min.css";
+@import "flatpickr/dist/flatpickr.min.css";
+@import "dropzone/dist/dropzone.css";
+@import "quill/dist/quill.core.css";
+@import "quill/dist/quill.snow.css";
+
+/* Custom css */
+@import "custom/_reboot.css";
+@import "custom/_navbar.css";
+@import "custom/_helper.css";
+
+/* Custom Plugin css */
+@import "custom/_swiper.css";
+@import "custom/_simplebar.css";
+@import "custom/_flatpickr.css";
+@import "custom/_quill.css";
+@import "custom/_rangeslider.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
