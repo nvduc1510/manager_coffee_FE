@@ -1,0 +1,393 @@
+<main>
+    <app-admin-topbar />
+    <app-admin-menu />
+    <!-- Start Content -->
+    <div class="w-full lg:ps-64">
+        <div class="p-6 page-content">
+            
+            <div class="p-6 border rounded-lg border-default-200 mb-6">
+                <div>
+                    <h4 class="text-xl font-medium text-default-900 mb-4">Personal Details</h4>
+
+                    <div class="grid lg:grid-cols-5 gap-6">
+                        <div class="lg:col-span-1">
+                            <div class="w-60 h-60 relative">
+                                <img src="assets/images/avatars/avatar3.png" class="w-full h-full rounded-full">
+                                <div class="absolute bottom-2 end-4">
+                                    <button class="w-11 h-11 flex items-center justify-center rounded-full bg-primary border-2 border-default-50">
+                                        <i data-lucide="camera" class="w-5 h-5 text-white"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-4">
+                            <div class="grid lg:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-default-900 mb-2" for="firstName">First Name</label>
+                                    <input id="firstName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your First Name">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-default-900 mb-2" for="lastName">Last Name</label>
+                                    <input id="lastName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your Last Name">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-default-900 mb-2" for="userName">User Name</label>
+                                    <input id="userName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your User Name">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-default-900 mb-2" for="emailAddress">Email</label>
+                                    <input id="emailAddress" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="email" placeholder="demoexample@mail.com">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-default-900 mb-2" for="phone_number">Phone Number</label>
+                                    <input id="phone_number" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="tel" placeholder="+1-123-XXX-4567">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-default-900 mb-2" for="country">Country/Region</label>
+                                    <select id="country" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                        <option value="United States" selected>United States</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="Bangladesh">Bangladesh</option>
+                                        <option value="China">China</option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Bharat">Bharat</option>
+                                        <option value="Afghanistan">Afghanistan</option>
+                                        <option value="France">France</option>
+                                        <option value="Brazil">Brazil</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="Colombia">Colombia</option>
+                                        <option value="Albania">Albania</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-default-900 mb-2" for="state">State</label>
+                                    <select id="state" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                        <option value="Alabama" selected>Alabama</option>
+                                        <option value="Alaska">Alaska</option>
+                                        <option value="Arizona">Arizona</option>
+                                        <option value="Arkansas">Arkansas</option>
+                                        <option value="California">California</option>
+                                        <option value="Colorado">Colorado</option>
+                                        <option value="Connecticut">Connecticut</option>
+                                        <option value="Delaware">Delaware</option>
+                                        <option value="Florida">Florida</option>
+                                        <option value="Georgia">Georgia</option>
+                                        <option value="Hawaii">Hawaii</option>
+                                        <option value="Idaho">Idaho</option>
+                                        <option value="Illinois">Illinois</option>
+                                        <option value="Indiana">Indiana</option>
+                                        <option value="Iowa">Iowa</option>
+                                        <option value="Kansas">Kansas</option>
+                                        <option value="Kentucky">Kentucky</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-default-900 mb-2" for="zip_code">Zip Code</label>
+                                    <input id="zip_code" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="35010">
+                                </div>
+
+                                <div>
+                                    <button class="flex items-center justify-center gap-2 rounded-full border border-primary bg-primary px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:border-primary-700 hover:bg-primary-500">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border rounded-lg border-default-200 mb-6">
+                <div>
+                    <h4 class="text-xl font-medium text-default-900 mb-4">Change Password</h4>
+
+                    <div class="mb-4" data-x-password>
+                        <label class="block text-sm font-medium text-default-900 mb-2" for="current_password">Current Password</label>
+                        <div class="flex">
+                            <input type="password" id="current_password" class="form-password block w-full rounded-s-full py-2.5 px-4 bg-transparent border border-default-200 focus:ring-transparent focus:border-default-200" type="password" placeholder="Enter your password">
+                            <button id="current_password" class="password-toggle inline-flex items-center justify-center py-2.5 px-4 border rounded-e-full bg-transparent -ms-px border-default-200">
+                                <i class="password-eye-on h-5 w-5 text-default-600" data-lucide="eye"></i>
+                                <i class="password-eye-off h-5 w-5 text-default-600" data-lucide="eye-off"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mb-4" data-x-password>
+                        <label class="block text-sm font-medium text-default-900 mb-2" for="new_password">New Password</label>
+                        <div class="flex">
+                            <input type="password" id="new_password" class="form-password block w-full rounded-s-full py-2.5 px-4 bg-transparent border border-default-200 focus:ring-transparent focus:border-default-200" type="password" placeholder="Enter your password">
+                            <button id="new_password" class="password-toggle inline-flex items-center justify-center py-2.5 px-4 border rounded-e-full bg-transparent -ms-px border-default-200">
+                                <i class="password-eye-on h-5 w-5 text-default-600" data-lucide="eye"></i>
+                                <i class="password-eye-off h-5 w-5 text-default-600" data-lucide="eye-off"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mb-4" data-x-password>
+                        <label class="block text-sm font-medium text-default-900 mb-2" for="confirm_password">Confirm Password</label>
+                        <div class="flex">
+                            <input type="password" id="confirm_password" class="form-password block w-full rounded-s-full py-2.5 px-4 bg-transparent border border-default-200 focus:ring-transparent focus:border-default-200" type="password" placeholder="Enter your password">
+                            <button id="confirm_password" class="password-toggle inline-flex items-center justify-center py-2.5 px-4 border rounded-e-full bg-transparent -ms-px border-default-200">
+                                <i class="password-eye-on h-5 w-5 text-default-600" data-lucide="eye"></i>
+                                <i class="password-eye-off h-5 w-5 text-default-600" data-lucide="eye-off"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="flex items-center justify-center gap-2 rounded-full border border-primary bg-primary px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:border-primary-700 hover:bg-primary-500">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6">
+                <div class="p-6 border rounded-lg border-default-200">
+                    <h4 class="text-xl font-medium text-default-900 mb-6">Billing Address</h4>
+
+                    <div class="grid lg:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="billingFirstName">First Name</label>
+                            <input id="billingFirstName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your First Name">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="billingLastName">Last Name</label>
+                            <input id="billingLastName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your Last Name">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="billingCompanyName">Company Name (Optional)</label>
+                            <input id="billingCompanyName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Label">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="billingAddress">Address</label>
+                            <input id="billingAddress" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Road No. 47/x, House no. 123/B, Flat No. B4">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="billingCountry">Country/Region</label>
+                            <select id="billingCountry" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                <option value="United States" selected>United States</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="China">China</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Bharat">Bharat</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="France">France</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Albania">Albania</option>
+                            </select>
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="billing_state">State</label>
+                            <select id="billing_state" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                <option value="Alabama" selected>Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="billing_city">City</label>
+                            <select id="billing_city" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                <option value="Alexander" selected>Alexander City</option>
+                                <option value="Andalusia">Andalusia</option>
+                                <option value="Anniston">Anniston</option>
+                                <option value="Athens">Athens</option>
+                                <option value="Atmore">Atmore</option>
+                                <option value="Auburn">Auburn</option>
+                                <option value="Bessemer">Bessemer</option>
+                                <option value="Birmingham">Birmingham</option>
+                                <option value="Chickasaw">Chickasaw</option>
+                                <option value="Clanton">Clanton</option>
+                                <option value="Cullman">Cullman</option>
+                                <option value="Decatur">Decatur</option>
+                                <option value="Demopolis">Demopolis</option>
+                                <option value="Dothan">Dothan</option>
+                                <option value="Enterprise">Enterprise</option>
+                                <option value="Eufaula">Eufaula</option>
+                                <option value="Florence">Florence</option>
+                                <option value="Fort Payne">Fort Payne</option>
+                                <option value="Gadsden">Gadsden</option>
+                                <option value="Greenville">Greenville</option>
+                                <option value="Guntersville">Guntersville</option>
+                                <option value="Huntsville">Huntsville</option>
+                                <option value="Jasper">Jasper</option>
+                                <option value="Marion">Marion</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="billing_zip_code">Zip Code</label>
+                            <input id="billing_zip_code" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="35010">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="billing_e_mail">Email</label>
+                            <input id="billing_e_mail" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="email" placeholder="demoexample@mail.com">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="billing_phone_number">Phone Number</label>
+                            <input id="billing_phone_number" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="tel" placeholder="+1-123-XXX-4567">
+                        </div>
+
+                        <div>
+                            <button class="flex items-center justify-center gap-2 rounded-full border border-primary bg-primary px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:border-primary-700 hover:bg-primary-500">Save Changes</button>
+                        </div>
+                    </div>
+                </div><!-- end grid-col -->
+
+                <div class="p-6 border rounded-lg border-default-200">
+                    <h4 class="text-xl font-medium text-default-900 mb-6">Shipping Address</h4>
+
+                    <div class="grid lg:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="shippingFirstName">First Name</label>
+                            <input id="shippingFirstName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your First Name">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="shippingLastName">Last Name</label>
+                            <input id="shippingLastName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your Last Name">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="shipping_company_name">Company Name (Optional)</label>
+                            <input id="shipping_company_name" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Label">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="shipping_address">Address</label>
+                            <input id="shipping_address" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Road No. 47/x, House no. 123/B, Flat No. B4">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="shipping_country">Country/Region</label>
+                            <select id="shipping_country" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                <option value="United States" selected>United States</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="China">China</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Bharat">Bharat</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="France">France</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Albania">Albania</option>
+                            </select>
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="shipping_state">State</label>
+                            <select id="shipping_state" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                <option value="Alabama" selected>Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="shipping_city">City</label>
+                            <select id="shipping_city" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                <option value="Alexander" selected>Alexander City</option>
+                                <option value="Andalusia">Andalusia</option>
+                                <option value="Anniston">Anniston</option>
+                                <option value="Athens">Athens</option>
+                                <option value="Atmore">Atmore</option>
+                                <option value="Auburn">Auburn</option>
+                                <option value="Bessemer">Bessemer</option>
+                                <option value="Birmingham">Birmingham</option>
+                                <option value="Chickasaw">Chickasaw</option>
+                                <option value="Clanton">Clanton</option>
+                                <option value="Cullman">Cullman</option>
+                                <option value="Decatur">Decatur</option>
+                                <option value="Demopolis">Demopolis</option>
+                                <option value="Dothan">Dothan</option>
+                                <option value="Enterprise">Enterprise</option>
+                                <option value="Eufaula">Eufaula</option>
+                                <option value="Florence">Florence</option>
+                                <option value="Fort Payne">Fort Payne</option>
+                                <option value="Gadsden">Gadsden</option>
+                                <option value="Greenville">Greenville</option>
+                                <option value="Guntersville">Guntersville</option>
+                                <option value="Huntsville">Huntsville</option>
+                                <option value="Jasper">Jasper</option>
+                                <option value="Marion">Marion</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="shipping_zip_code">Zip Code</label>
+                            <input id="shipping_zip_code" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="35010">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="shipping_e_mail">Email</label>
+                            <input id="shipping_e_mail" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="email" placeholder="demoexample@mail.com">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="shipping_phone_number">Phone Number</label>
+                            <input id="shipping_phone_number" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="tel" placeholder="+1-123-XXX-4567">
+                        </div>
+
+                        <div>
+                            <button class="flex items-center justify-center gap-2 rounded-full border border-primary bg-primary px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:border-primary-700 hover:bg-primary-500">Save Changes</button>
+                        </div>
+                    </div>
+                </div><!-- end grid-col -->
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+    <app-footer />
+</main>
+

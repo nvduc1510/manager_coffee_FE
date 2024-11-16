@@ -9,14 +9,14 @@
 
     <div class="h-[calc(100%-390px)]" data-simplebar>
         <ul class="admin-menu p-4 w-full flex flex-col gap-1.5">
-            <li class="menu-item">
-                <a class="flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-dashboard.html">
+            <li class="menu-item ">
+                <a (click)="navigationHome()" class="flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100 cursor-pointer">
                     <i data-lucide="layout-grid" class="w-5 h-5"></i>
-                    Dashboard
+                    Trang chủ
                 </a>
             </li>
 
-            <li class="menu-item">
+            <!-- <li class="menu-item">
                 <a class="flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-manage.html">
                     <i data-lucide="settings-2" class="w-5 h-5"></i>
                     Manage
@@ -120,31 +120,33 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> -->
 
             <li class="menu-item">
-                <a href="javascript:void(0)" data-hs-collapse="#menuProduct" class="hs-collapse-toggle flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
+                <a (click)="toggleMenu()"
+                    class="cursor-pointer hs-collapse-toggle flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
                     <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-                    Product
-                    <i data-lucide="chevron-down" class="w-4 h-4 ms-auto transition-all hs-collapse-open:rotate-180"></i>
+                        Sản phẩm
+                    <i class="fa-solid fa-chevron-up" [ngClass]="{'rotate-180': isMenuOpen}"></i>
                 </a>
-
-                <div id="menuProduct" class="hs-collapse w-full overflow-hidden transition-[height] duration-300 hidden">
+            
+                <div id="menuProduct" class="hs-collapse w-full overflow-hidden transition-[height] duration-300" 
+                    [ngClass]="{'hidden': !isMenuOpen}">
                     <ul class="space-y-2 mt-2">
                         <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-product-list.html">
+                            <a (click)="navigationProduct()" class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100 cursor-pointer" >
                                 <i data-lucide="dot" class="w-6 h-6"></i>
                                 Product List
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-product-details.html">
+                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100 cursor-pointer">
                                 <i data-lucide="dot" class="w-6 h-6"></i>
                                 Product Details
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-product-add.html">
+                            <a (click)="navigationProductAdd()" class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100 cursor-pointer">
                                 <i data-lucide="dot" class="w-6 h-6"></i>
                                 Product Add
                             </a>
@@ -158,6 +160,7 @@
                     </ul>
                 </div>
             </li>
+            
 
             <li class="menu-item">
                 <a href="javascript:void(0)" data-hs-collapse="#menuSeller" class="hs-collapse-toggle flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">

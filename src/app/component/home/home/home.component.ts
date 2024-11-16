@@ -47,6 +47,7 @@ export class HomeComponent {
   //Products
   productMap : Map<number, any[]> = new Map<number, any[]>();
   listProducts : any[] = [];
+  listTop5Products : any[] = [];
   showAllProduct : any;
   ordProductName = '';
 
@@ -63,6 +64,7 @@ export class HomeComponent {
     });
     this.checkIdLogin();
     this.getCollections();
+    this.getTop5Product();
   }
 
   checkIdLogin(): void {
@@ -139,6 +141,20 @@ export class HomeComponent {
           console.error('Error:', err);
         }
       });
+  }
+
+  getTop5Product() : void {
+    this.productService.getTop5Product().subscribe({
+      next: (data: any) => {
+        this.listTop5Products = data;
+      }, error: (err: any) => {
+        console.error('Error:', err);
+      }
+    });
+  }
+
+  getProductImage(image: string | null): string {
+    return image ? `../../../../assets/images/product/${image}` : '../../../../assets/images/product/hot-chocolate.png';
   }
 
 

@@ -23,6 +23,7 @@ export class AuthorizeGuard  {
     
     if (token) {
       const payload = TokenUtils.parseJwt(token);
+      
       // Kiểm tra nếu token hết hạn
       if (!payload || Date.now() >= payload.exp * 1000) {
         this.sessionStorageService.removeItem('access_token');

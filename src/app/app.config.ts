@@ -7,10 +7,12 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
 import { ReactiveFormsModule } from '@angular/forms';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { TokenInterceptor } from './shared/auth/token.interceptor';
+import { LucideAngularModule, ShoppingBag } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     TokenInterceptor,
+    LucideAngularModule,
     provideAnimations(),
     importProvidersFrom(HttpClientModule),
     provideHttpClient(withFetch()),

@@ -38,8 +38,7 @@ module.exports = {
 
     plugins: [
         require('preline/plugin'),
-        // Xóa hoặc bình luận dòng này nếu không cần plugin custom
-        // require('./custom.plugin'),
+        require('./custom.plugin'),
         createThemes({
             light: {
                 default: colors.slate,

@@ -64,105 +64,28 @@
                                     <h5 class="text-lg text-default-600">{{collection.collectionName}}</h5>
                                 </a>
                             </div>
-                            <!-- <a href="product-grid.html" class="text-center space-y-4">
-                                <div class="">
-                                    <img src="assets/images/icons/category/fruit_juice.png" class="mx-auto max-w-full h-full">
-                                </div>
-                                <h5 class="text-lg text-default-600">Beverage</h5>
-                            </a> -->
-                            <!-- <a href="product-grid.html" class="text-center space-y-4">
-                                <div class="">
-                                    <img src="assets/images/icons/category/bubble-tea.svg" class="mx-auto max-w-full h-full">
-                                </div>
-                                <h5 class="text-lg text-default-600">Beverage</h5>
-                            </a>
-                            <a href="product-grid.html" class="text-center space-y-4">
-                                <div class="">
-                                    <img src="assets/images/icons/category/bakery.svg" class="mx-auto max-w-full h-full">
-                                </div>
-                                <h5 class="text-lg text-default-600">Bakery</h5>
-                            </a>
-                            <a href="product-grid.html" class="text-center space-y-4">
-                                <div class="">
-                                    <img src="assets/images/icons/category/pizza.svg" class="mx-auto max-w-full h-full">
-                                </div>
-                                <h5 class="text-lg text-default-600">Pizza</h5>
-                            </a>
-                            <a href="product-grid.html" class="text-center space-y-4">
-                                <div class="">
-                                    <img src="assets/images/icons/category/burger.svg" class="mx-auto max-w-full h-full">
-                                </div>
-                                <h5 class="text-lg text-default-600">Burger</h5>
-                            </a>
-                            <a href="product-grid.html" class="text-center space-y-4">
-                                <div class="">
-                                    <img src="assets/images/icons/category/seafood.svg" class="mx-auto max-w-full h-full">
-                                </div>
-                                <h5 class="text-lg text-default-600">Seafood</h5>
-                            </a>
-                            <a href="product-grid.html" class="text-center space-y-4">
-                                <div class="">
-                                    <img src="assets/images/icons/category/gelato.svg" class="mx-auto max-w-full h-full">
-                                </div>
-                                <h5 class="text-lg text-default-600">Desserts</h5>
-                            </a> -->
                         </div><!-- end grid -->
                     </div>
 
                     <div class="pb-10">
                         <div class="flex flex-wrap items-center justify-between gap-4 mb-10">
                             <h3 class="text-xl font-semibold text-default-950">Best Selling Products</h3>
-                            <a href="product-grid.html" class="inline-flex items-center gap-1 text-sm text-primary font-medium hover:text-primary-500">View all <i data-lucide="chevron-right" class="h-5 w-5"></i></a>
                         </div>
                         <div class="grid lg:grid-cols-4 grid-cols-2 gap-6">
-                            <a href="product-grid.html" class="border border-default-200 rounded-lg p-4 overflow-hidden hover:border-primary transition-all duration-300">
+                            <a *ngFor="let t5 of listTop5Products" href="product-grid.html" class="border border-default-200 rounded-lg p-4 overflow-hidden hover:border-primary transition-all duration-300">
                                 <div class="relative rounded-lg overflow-hidden divide-y divide-default-200">
                                     <div class="mb-4 mx-auto">
-                                        <img src="assets/images/dishes/veg-rice.png" class="w-full h-full">
+                                        <img [src]="getProductImage(t5.productImage)" class="w-full h-full">
+                                        <!-- <img src="assets/images/dishes/veg-rice.png" class="w-full h-full"> -->
                                     </div>
 
                                     <div class="pt-2">
-                                        <h4 class="text-default-800 text-xl font-semibold line-clamp-1 mb-2">Indian Food</h4>
-                                        <h6 class="font-semibold text-lg text-default-500">$25.14</h6>
+                                        <h4 class="text-default-800 text-xl font-semibold line-clamp-1 mb-2">{{t5.productName}}</h4>
+                                        <h6 class="font-semibold text-lg text-default-500">{{t5.productPrice | currency: 'USD' : 'symbol' : '1.0-0'}}</h6>
                                     </div>
                                 </div>
                             </a><!-- end grid-cols -->
-                            <a href="product-grid.html" class="border border-default-200 rounded-lg p-4 overflow-hidden hover:border-primary transition-all duration-300">
-                                <div class="relative rounded-lg overflow-hidden divide-y divide-default-200">
-                                    <div class="mb-4 mx-auto">
-                                        <img src="assets/images/dishes/noodles.png" class="w-full h-full">
-                                    </div>
-
-                                    <div class="pt-2">
-                                        <h4 class="text-default-800 text-xl font-semibold line-clamp-1 mb-2">Noodles</h4>
-                                        <h6 class="font-semibold text-lg text-default-500">$15.24</h6>
-                                    </div>
-                                </div>
-                            </a><!-- end grid-cols -->
-                            <a href="product-grid.html" class="border border-default-200 rounded-lg p-4 overflow-hidden hover:border-primary transition-all duration-300">
-                                <div class="relative rounded-lg overflow-hidden divide-y divide-default-200">
-                                    <div class="mb-4 mx-auto">
-                                        <img src="assets/images/dishes/red-velvet-pastry.png" class="w-full h-full">
-                                    </div>
-
-                                    <div class="pt-2">
-                                        <h4 class="text-default-800 text-xl font-semibold line-clamp-1 mb-2">Red Velvet Pastry</h4>
-                                        <h6 class="font-semibold text-lg text-default-500">$25.14</h6>
-                                    </div>
-                                </div>
-                            </a><!-- end grid-cols -->
-                            <a href="product-grid.html" class="border border-default-200 rounded-lg p-4 overflow-hidden hover:border-primary transition-all duration-300">
-                                <div class="relative rounded-lg overflow-hidden divide-y divide-default-200">
-                                    <div class="mb-4 mx-auto">
-                                        <img src="assets/images/dishes/garlic-herb-bread.png" class="w-full h-full">
-                                    </div>
-
-                                    <div class="pt-2">
-                                        <h4 class="text-default-800 text-xl font-semibold line-clamp-1 mb-2">Indian Food</h4>
-                                        <h6 class="font-semibold text-lg text-default-500">$25.14</h6>
-                                    </div>
-                                </div>
-                            </a><!-- end grid-cols -->
+                            
                         </div><!-- end grid -->
                     </div>
                 </div>

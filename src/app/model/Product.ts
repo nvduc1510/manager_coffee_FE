@@ -6,5 +6,7 @@ export interface Product {
     productPrice : string;
     productImage : string;
     collections : string;
+    sales : number;
+    deleteFlag : number;
     collectionId : Collections
 }

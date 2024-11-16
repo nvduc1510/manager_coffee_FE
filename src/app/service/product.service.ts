@@ -13,15 +13,20 @@ export class ProductService {
   constructor(
     private http: HttpClient,
   ) { }
-  
+  // top-products
   getProducts (productName : string, collectionId : number, ordProductName : string, offset : number, limit : number)
   : Observable<Page> {
     const params = new HttpParams()
     .set('productName', productName ) 
-    .set('collectionId', collectionId ) 
+    .set('collectionId', collectionId.toString() ) 
     .set('ordProductName', ordProductName)
     .set('offset', offset )
     .set('limit', limit );
     return this.http.get<any>( AppConstants.BASE_URL_API + '/product/getAll', {params : params});
+  }
+
+  getTop5Product ()
+  : Observable<any> {
+    return this.http.get<any>( AppConstants.BASE_URL_API + '/product/top-products');
   } 
 }
