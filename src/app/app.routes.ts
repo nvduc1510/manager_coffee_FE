@@ -12,6 +12,7 @@ import { ProductEditComponent } from './component/admin/product-edit/product-edi
 import { CollectionListComponent } from './component/admin/collection-list/collection-list.component';
 import { CollectionEditComponent } from './component/admin/collection-edit/collection-edit.component';
 import { CollectionAddComponent } from './component/admin/collection-add/collection-add.component';
+import { UserUpdateComponent } from './component/admin/user-update/user-update.component';
 
 export const routes: Routes = [
     {path:'',redirectTo:'login',pathMatch:'full'},
@@ -24,7 +25,7 @@ export const routes: Routes = [
     { path: 'page_404', component: ProfileComponent},
     { path: 'user_list', component: UserListComponent, canActivate: [AuthorizeGuard]},
     { path: 'user_add', component: UserAddComponent, canActivate: [AuthorizeGuard]},
-    { path: 'user_edit', component: UserAddComponent, canActivate: [AuthorizeGuard]},
+    { path: 'user_edit/:userId', component: UserUpdateComponent , canActivate: [AuthorizeGuard]},
     { path: 'product_edit', component: ProductEditComponent, canActivate: [AuthorizeGuard]},
     { path: 'collection_list', component: CollectionListComponent, canActivate: [AuthorizeGuard]},
     { path: 'collection_edit', component: CollectionEditComponent, canActivate: [AuthorizeGuard]},

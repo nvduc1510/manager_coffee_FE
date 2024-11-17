@@ -54,9 +54,9 @@ export class AdminMenuComponent {
     this.navigationService.navigationUserList();
   }
 
-  navigationUserEdit() : void {
-    this.navigationService.navigationUserEdit();
-  }
+  // navigationUserEdit() : void {
+  //   this.navigationService.navigationUserEdit();
+  // }
 
   navigationCollectionList(): void {
     this.navigationService.navigationCollectionList();
@@ -66,10 +66,5 @@ export class AdminMenuComponent {
     this.navigationService.navigationCollectionAdd();
   }
 
-
-
-  navigationCollectionEdit(): void {
-    this.navigationService.navigationCollectionEdit();
-  }
 
 }

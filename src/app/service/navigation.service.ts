@@ -75,9 +75,9 @@ export class NavigationService {
     this.router.navigate(['/user_add']);
   }
 
-  navigationUserEdit() : void {
+  navigationUserEdit(userId : number) : void {
     localStorage.clear();
-    this.router.navigate(['/user_edit']);
+    this.router.navigate(['/user_edit', userId]);
   }
 
 

@@ -12,5 +12,6 @@ import { AdminMenuComponent } from '../../../shared/component/common/admin-menu/
   styleUrl: './collection-list.component.css'
 })
 export class CollectionListComponent {
-
+  constructor(){};
+  
 }

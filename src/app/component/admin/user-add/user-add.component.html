@@ -7,98 +7,60 @@
     <div class="w-full lg:ps-64">
         <div class="p-6 page-content">
             <div class="border rounded-lg border-default-200">
-                <div class="p-6">
-                    <div class="grid lg:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-sm font-medium text-default-900 mb-2" for="firstName">First Name</label>
-                            <input id="firstName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your First Name">
+                <form action="#" [formGroup]="dataForm">
+                    <div class="p-6">
+                        <div class="grid lg:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-medium text-default-900 mb-2" for="firstName">Tên đầy đủ</label>
+                                <input formControlName="userFullName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Nhập tên">
+                                <p class="pl-3 mt-2 text-sm text-red-600" *ngIf="dataForm.get('userFullName')?.errors && dataForm.get('userFullName')?.touched">
+                                    <span>{{dataForm.controls['userFullName'].errors?.['params']}}</span>
+                                </p>
+                            </div>
+    
+                            <div>
+                                <label class="block text-sm font-medium text-default-900 mb-2" for="lastName">Tên ngắn</label>
+                                <input formControlName="username" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Nhập tên">
+                            </div>
+    
+                            <div>
+                                <label class="block text-sm font-medium text-default-900 mb-2" for="user_name">Email</label>
+                                <input formControlName="email" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Email">
+                                <p class="pl-3 mt-2 text-sm text-red-600" *ngIf="dataForm.get('email')?.errors && dataForm.get('email')?.touched">
+                                    <span>{{dataForm.controls['email'].errors?.['params']}}</span>
+                                </p>
+                            </div>
+    
+                            <div>
+                                <label class="block text-sm font-medium text-default-900 mb-2" for="emailAddress">Giới tính</label>
+                                <input formControlName="userSex" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="email" placeholder="Giới tính">
+                            </div>
+    
+                            <div>
+                                <label class="block text-sm font-medium text-default-900 mb-2" for="phone_number">Ngày sinh</label>
+                                <input formControlName="userBirthdate" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="tel" placeholder="dd/MM/yyyy">
+                            </div>
+    
+                            <div>
+                                <label class="block text-sm font-medium text-default-900 mb-2" for="country">Quốc gia/Khu vực</label>
+                                <select  formControlName="userAddress" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                    <option *ngFor="let country of listCountry"  [value]="country">{{country}}</option>
+                                </select>
+                            </div>
                         </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-default-900 mb-2" for="lastName">Last Name</label>
-                            <input id="lastName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your Last Name">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-default-900 mb-2" for="user_name">User Name</label>
-                            <input id="user_name" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your User Name">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-default-900 mb-2" for="emailAddress">Email</label>
-                            <input id="emailAddress" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="email" placeholder="demoexample@mail.com">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-default-900 mb-2" for="phone_number">Phone Number</label>
-                            <input id="phone_number" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="tel" placeholder="+1-123-XXX-4567">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-default-900 mb-2" for="country">Country/Region</label>
-                            <select id="country" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
-                                <option value="United States" selected>United States</option>
-                                <option value="Canada">Canada</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Germany">Germany</option>
-                                <option value="Bangladesh">Bangladesh</option>
-                                <option value="China">China</option>
-                                <option value="Argentina">Argentina</option>
-                                <option value="Bharat">Bharat</option>
-                                <option value="Afghanistan">Afghanistan</option>
-                                <option value="France">France</option>
-                                <option value="Brazil">Brazil</option>
-                                <option value="Belgium">Belgium</option>
-                                <option value="Colombia">Colombia</option>
-                                <option value="Albania">Albania</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-default-900 mb-2" for="state">State</label>
-                            <select id="state" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
-                                <option value="Alabama" selected>Alabama</option>
-                                <option value="Alaska">Alaska</option>
-                                <option value="Arizona">Arizona</option>
-                                <option value="Arkansas">Arkansas</option>
-                                <option value="California">California</option>
-                                <option value="Colorado">Colorado</option>
-                                <option value="Connecticut">Connecticut</option>
-                                <option value="Delaware">Delaware</option>
-                                <option value="Florida">Florida</option>
-                                <option value="Georgia">Georgia</option>
-                                <option value="Hawaii">Hawaii</option>
-                                <option value="Idaho">Idaho</option>
-                                <option value="Illinois">Illinois</option>
-                                <option value="Indiana">Indiana</option>
-                                <option value="Iowa">Iowa</option>
-                                <option value="Kansas">Kansas</option>
-                                <option value="Kentucky">Kentucky</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-default-900 mb-2" for="zip_code">Zip Code</label>
-                            <input id="zip_code" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="35010">
-                        </div>
-
-                        <div class="lg:col-span-2">
-                            <label class="block text-sm font-medium text-default-900 mb-2" for="description">Description</label>
-                            <textarea id="description" class="block w-full bg-transparent rounded-lg py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200" rows="5" placeholder="Enter Your Last Name"></textarea>
+    
+                        <div class="flex justify-end gap-4">
+                            <button (click)="navigationUserList()" class="flex items-center justify-center gap-2 rounded-full bg-primary/10 px-6 py-2.5 text-center text-sm font-semibold text-primary shadow-sm transition-all duration-200 hover:bg-primary hover:text-white">
+                                <i class="fa-solid fa-x"></i>
+                                Close
+                            </button>
+                            <button (click)="addUser()" class="flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary-500">
+                                <i class="fa-solid fa-file-export"></i>
+                                Save
+                            </button>
                         </div>
                     </div>
-
-                    <div class="flex justify-end gap-4">
-                        <button class="flex items-center justify-center gap-2 rounded-full bg-primary/10 px-6 py-2.5 text-center text-sm font-semibold text-primary shadow-sm transition-all duration-200 hover:bg-primary hover:text-white">
-                            <i data-lucide="x" class="w-5 h-5"></i>
-                            Close
-                        </button>
-                        <button class="flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary-500">
-                            <i data-lucide="save" class="w-5 h-5"></i>
-                            Save
-                        </button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
