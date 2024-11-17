@@ -5,6 +5,7 @@ import { AuthorizeGuard } from './shared/auth/authorize.guard';
 import { ProductComponent } from './component/admin/product/product.component';
 import { ProductAddComponent } from './component/admin/product-add/product-add.component';
 import { ProfileComponent } from './component/user/profile/profile.component';
+import { ProductDetailComponent } from './component/admin/product-detail/product-detail.component';
 
 export const routes: Routes = [
     {path:'',redirectTo:'login',pathMatch:'full'},
@@ -12,5 +13,7 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent, canActivate: [AuthorizeGuard]},
     { path: 'product', component: ProductComponent, canActivate: [AuthorizeGuard]},
     { path: 'product_add', component: ProductAddComponent, canActivate: [AuthorizeGuard]},
-    { path: 'profile', component: ProfileComponent, canActivate: [AuthorizeGuard]}
+    { path: 'product_detail/:productId', component: ProductDetailComponent, canActivate: [AuthorizeGuard] },
+    { path: 'profile', component: ProfileComponent, canActivate: [AuthorizeGuard]},
+    { path: 'page_404', component: ProfileComponent}
 ];

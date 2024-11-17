@@ -12,14 +12,27 @@ import { NavigationService } from '../../../../service/navigation.service';
   styleUrl: './admin-menu.component.css'
 })
 export class AdminMenuComponent {
+
   constructor(
     private navigationService : NavigationService
   ){}
 
-  isMenuOpen: boolean = false;
+  menuStates: { [key: string]: boolean } = {};
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+  // Hàm để toggle trạng thái menu theo id
+  toggleMenu(id: string): void {
+    // Nếu menu chưa có trong đối tượng menuStates thì khởi tạo với giá trị false
+    if (this.menuStates[id] === undefined) {
+      this.menuStates[id] = false;
+    }
+
+    // Đảo ngược trạng thái của menu theo id
+    this.menuStates[id] = !this.menuStates[id];
+  }
+
+  // Kiểm tra trạng thái của menu theo id
+  isMenuOpen(id: string): boolean {
+    return this.menuStates[id] || false;
   }
 
   navigationProduct(): void {

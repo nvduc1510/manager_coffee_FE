@@ -20,6 +20,11 @@ export class NavigationService {
     this.router.navigate(['/product_add']);
   }
 
+  navigationProductDetail(productId : number) : void {
+    localStorage.clear();
+    this.router.navigate(['/product_detail',productId]);
+  }
+
   navigationHome(): void {
     localStorage.clear();
     this.router.navigate(['/home']);
@@ -28,5 +33,10 @@ export class NavigationService {
   navigationProfile(): void {
     localStorage.clear();
     this.router.navigate(['/profile']);
+  }
+
+  navigationPage404() :void {
+    localStorage.clear();
+    this.router.navigate(['/page_404']);
   }
 }

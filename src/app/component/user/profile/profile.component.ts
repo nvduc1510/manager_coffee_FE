@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FooterComponent } from '../../../shared/component/common/footer/footer.component';
 import { AdminTopbarComponent } from '../../../shared/component/common/admin-topbar/admin-topbar.component';
 import { AdminMenuComponent } from '../../../shared/component/common/admin-menu/admin-menu.component';
-import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ValidateComponent } from '../../../model/validate/validate.component';
@@ -12,11 +12,12 @@ import { CommonService } from '../../../service/common.service';
 import { UserService } from '../../../service/user.service';
 import { TokenUtils } from '../../../shared/utils/token.utils';
 import * as countries from 'country-list';
+import { log } from 'console';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [CommonModule,FormsModule, FooterComponent, AdminTopbarComponent, AdminMenuComponent],
+  imports: [CommonModule,FormsModule, FooterComponent, AdminTopbarComponent, AdminMenuComponent,ReactiveFormsModule],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
@@ -54,18 +55,28 @@ export class ProfileComponent {
     private userService : UserService
   ){}
 
+  createFormGroup(): void {
+    this.commonService.createPlatform().then((formGroup) => {
+      this.dataForm = formGroup;
+    }).catch((error) => {
+      console.log('Error while creating form group', error);
+    })
+  }
   ngOnInit() : void {
-    this.disableEmail = true;
+    this.createFormGroup();
+    // this.dataForm.get('email')?.disable;
     this.listCountry = countries.getNames();
     
-
     this.searchForm = this.fb.group({
       userName: [''],
       productName: [''],
       collectionName: [''],
     });
+    
     this.jwtDecoded();
   }
+
+
   jwtDecoded(): void {
     const userToken = sessionStorage.getItem('access_token');
     if (userToken) {
@@ -98,12 +109,16 @@ export class ProfileComponent {
       next: (data: any) => {
         if (data?.params) {
           this.users = data.params;
+          this.dataForm.patchValue(this.users);
+          console.log("data:  " + JSON.stringify(this.users));
+          
           this.userFullName = this.users.userFullName;
           this.username = this.users.username;
           this.email = this.users.email;
           this.userSex = this.users.userSex;
           this.userBirthdate = this.users.userBirthdate;
           this.userAddress = this.users.userAddress;
+          this.userRoleName = this.users.userRoleName;
           
         }
       },
@@ -122,8 +137,7 @@ export class ProfileComponent {
           if (data?.message) {
             this.successMessage = data.message;
             alert(this.successMessage);
-            // Đưa ra quyết định liệu có reload trang hay không, hoặc chuyển hướng trang sau khi cập nhật
-            window.location.reload(); // Cẩn thận với việc reload trang, có thể gây ảnh hưởng đến UX
+            window.location.reload();
           }
         },
         error: error => {

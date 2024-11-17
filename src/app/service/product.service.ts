@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AppConstants } from '../app-constants';
 import { Page } from '../model/Page';
+import { UpdateProduct } from '../model/updateProduct';
 const httpOptions = {header : new HttpHeaders ({'Content-Type': 'application/json'})}
 
 @Injectable({
@@ -29,4 +30,19 @@ export class ProductService {
   : Observable<any> {
     return this.http.get<any>( AppConstants.BASE_URL_API + '/product/top-products');
   } 
+
+  deleteProduct(productId : number ) : Observable<any> {
+    const url = AppConstants.BASE_URL_API + `/product/delete/${productId}`;
+    return this.http.delete(url);
+  }
+
+  getProductDetail(productId : number) : Observable<any> {
+    const url = AppConstants.BASE_URL_API + `/product/detail/${productId}`;
+    return this.http.get<any>(url);
+  }
+
+  updateProduct(productId : number, product : UpdateProduct) : Observable<any> {
+    const url = AppConstants.BASE_URL_API + `/product/update/${productId}`;
+    return this.http.put(url, product);
+  }
 }

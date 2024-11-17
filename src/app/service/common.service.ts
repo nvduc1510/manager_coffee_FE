@@ -25,19 +25,36 @@ export class CommonService {
   }
 
   async createPlatform() : Promise<FormGroup<any>> {
-    return this.fb.group({
-       userId: [''],
-       username: ['', [ValidateComponent.validateUsername]],
-       userFullName: ['', ValidateComponent.validateUsername],
-       email: [''],
-       userSex: [''],
-       userBirthdate: [''],
-       userAddress: [''],
-       userImage: [''],
-       password: ['', [ValidateComponent.ValidPassword]],
-       confirmPassword: ['', [ValidateComponent.validateConfirm]],
-     }, {
-       validators: ValidateComponent.ConfirmPassword
-     });
-   }
+    const form = this.fb.group({
+      userId: [''],
+      username: ['', [ValidateComponent.validateUsername]],
+      userFullName: ['', ValidateComponent.validateUsername],
+      email: [''],
+      userSex: [''],
+      userBirthdate: [''],
+      userAddress: [''],
+      userImage: [''],
+      password: ['', [ValidateComponent.ValidPassword]],
+      confirmPassword: ['', [ValidateComponent.validateConfirm]],
+    }, {
+      validators: ValidateComponent.ConfirmPassword
+    });
+    return form;
+  }
+
+  async createPlatformProduct() : Promise<FormGroup<any>> {
+    const form = this.fb.group({
+      productId: [''],
+      productName: [''],
+      productPrice: [''],
+      productImage: [''],
+      sales: [''],
+      deleteFlag: [''],
+      collectionId: [''],
+      collectionName: [''],
+      collectionDescription: [''],
+      collectionImage: [''],
+    });
+    return form;
+  }
 }

@@ -4,111 +4,120 @@
     <!-- Start Content -->
     <div class="w-full lg:ps-64">
         <div class="p-6 page-content">
-            
-            <div class="p-6 border rounded-lg border-default-200 mb-6">
-                <div>
-                    <h4 class="text-xl font-medium text-default-900 mb-4">Personal Details</h4>
-
-                    <div class="grid lg:grid-cols-5 gap-6">
-                        <div class="lg:col-span-1">
-                            <div class="w-60 h-60 relative">
-                                <img src="assets/images/avatars/avatar3.png" class="w-full h-full rounded-full">
-                                <div class="absolute bottom-2 end-4">
-                                    <button class="w-11 h-11 flex items-center justify-center rounded-full bg-primary border-2 border-default-50">
-                                        <i data-lucide="camera" class="w-5 h-5 text-white"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="lg:col-span-4">
-                            <div class="grid lg:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-default-900 mb-2" for="firstName">Tên</label>
-                                    <input [(ngModel)]="userFullName" id="userFullName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Nhập họ và tên">
-                                </div>
-
-                                <div>
-                                    <label class="block text-sm font-medium text-default-900 mb-2" for="username">Tên ngắn</label>
-                                    <input [(ngModel)]="username" id="username" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Nhập tên ngắn">
-                                </div>
-
-                                <div>
-                                    <label class="block text-sm font-medium text-default-900 mb-2" for="userSex">Giới tính</label>
-                                    <input [(ngModel)] ="userSex" id="userSex" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your User Name">
-                                </div>
-
-                                <div>
-                                    <label class="block text-sm font-medium text-default-900 mb-2" for="email">Email</label>
-                                    <input [(ngModel)] ="email" id="email" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="email" placeholder="demoexample@mail.com">
-                                </div>
-
-                                <div>
-                                    <label class="block text-sm font-medium text-default-900 mb-2" for="country">Country/Region</label>
-                                    <select [(ngModel)]="userAddress" id="userAddress" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
-                                        <option *ngFor="let country of listCountry"  [value]="userAddress">{{country}}</option>
-                                        
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label class="block text-sm font-medium text-default-900 mb-2" for="zip_code">Zip Code</label>
-                                    <input id="zip_code" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="35010">
-                                </div>
-
-                                <div>
-                                    <button class="flex items-center justify-center gap-2 rounded-full border border-primary bg-primary px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:border-primary-700 hover:bg-primary-500">Save Changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-6 border rounded-lg border-default-200 mb-6">
-                <div>
-                    <h4 class="text-xl font-medium text-default-900 mb-4">Change Password</h4>
-
-                    <div class="mb-4" data-x-password>
-                        <label class="block text-sm font-medium text-default-900 mb-2" for="current_password">Current Password</label>
-                        <div class="flex">
-                            <input type="password" id="current_password" class="form-password block w-full rounded-s-full py-2.5 px-4 bg-transparent border border-default-200 focus:ring-transparent focus:border-default-200" type="password" placeholder="Enter your password">
-                            <button id="current_password" class="password-toggle inline-flex items-center justify-center py-2.5 px-4 border rounded-e-full bg-transparent -ms-px border-default-200">
-                                <i class="password-eye-on h-5 w-5 text-default-600" data-lucide="eye"></i>
-                                <i class="password-eye-off h-5 w-5 text-default-600" data-lucide="eye-off"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="mb-4" data-x-password>
-                        <label class="block text-sm font-medium text-default-900 mb-2" for="new_password">New Password</label>
-                        <div class="flex">
-                            <input type="password" id="new_password" class="form-password block w-full rounded-s-full py-2.5 px-4 bg-transparent border border-default-200 focus:ring-transparent focus:border-default-200" type="password" placeholder="Enter your password">
-                            <button id="new_password" class="password-toggle inline-flex items-center justify-center py-2.5 px-4 border rounded-e-full bg-transparent -ms-px border-default-200">
-                                <i class="password-eye-on h-5 w-5 text-default-600" data-lucide="eye"></i>
-                                <i class="password-eye-off h-5 w-5 text-default-600" data-lucide="eye-off"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="mb-4" data-x-password>
-                        <label class="block text-sm font-medium text-default-900 mb-2" for="confirm_password">Confirm Password</label>
-                        <div class="flex">
-                            <input type="password" id="confirm_password" class="form-password block w-full rounded-s-full py-2.5 px-4 bg-transparent border border-default-200 focus:ring-transparent focus:border-default-200" type="password" placeholder="Enter your password">
-                            <button id="confirm_password" class="password-toggle inline-flex items-center justify-center py-2.5 px-4 border rounded-e-full bg-transparent -ms-px border-default-200">
-                                <i class="password-eye-on h-5 w-5 text-default-600" data-lucide="eye"></i>
-                                <i class="password-eye-off h-5 w-5 text-default-600" data-lucide="eye-off"></i>
-                            </button>
-                        </div>
-                    </div>
-
+            <form action="#" [formGroup]="dataForm" (ngSubmit)="updateUser()">
+                <div class="p-6 border rounded-lg border-default-200 mb-6">
                     <div>
-                        <button class="flex items-center justify-center gap-2 rounded-full border border-primary bg-primary px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:border-primary-700 hover:bg-primary-500">Save Changes</button>
+                        <h4 class="text-xl font-medium text-default-900 mb-4">Personal Details</h4>
+                        <div class="grid lg:grid-cols-5 gap-6">
+                            <div class="lg:col-span-1">
+                                <div class="w-60 h-60 relative">
+                                    <img src="assets/images/avatars/avatar3.png" class="w-full h-full rounded-full">
+                                    <div class="absolute bottom-2 end-4">
+                                        <button class="w-11 h-11 flex items-center justify-center rounded-full bg-primary border-2 border-default-50">
+                                            <i class="fa-solid fa-camera "></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="lg:col-span-4">
+                                <div class="grid lg:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-default-900 mb-2" for="firstName">Tên</label>
+                                        <input formControlName="userFullName" id="userFullName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Nhập họ và tên">
+                                        <!-- <p class="pl-3 mt-2 text-sm text-red-600">
+                                            This field is required.
+                                        </p> -->
+                                    </div>
+    
+                                    <div>
+                                        <label class="block text-sm font-medium text-default-900 mb-2" for="username">Tên ngắn</label>
+                                        <input formControlName="username" id="username" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Nhập tên ngắn">
+                                        <p class="pl-3 mt-2 text-sm text-red-600" *ngIf="dataForm.get('username')?.errors && dataForm.get('username')?.touched">
+                                            <span>{{dataForm.controls['username'].errors?.['params']}}</span>
+                                        </p>
+                                    </div>
+    
+                                    <div>
+                                        <label class="block text-sm font-medium text-default-900 mb-2" for="userSex">Giới tính</label>
+                                        <input formControlName ="userSex" id="userSex" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your User Name">
+                                    </div>
+    
+                                    <div>
+                                        <label class="block text-sm font-medium text-default-900 mb-2" for="email">Email</label>
+                                        <input 
+                                        formControlName="email" 
+                                        id="email" 
+                                        class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50 disabled:bg-gray-200 " 
+                                        style="pointer-events: none; cursor:no-drop">
+                                    </div>
+    
+                                    <div>
+                                        <label class="block text-sm font-medium text-default-900 mb-2" for="country">Quốc gia/Khu vực</label>
+                                        <select formControlName="userAddress" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                            <option *ngFor="let country of listCountry"  [value]="country">{{country}}</option>
+                                        </select>
+                                    </div>
+    
+                                    <div>
+                                        <label class="block text-sm font-medium text-default-900 mb-2" for="zip_code">Ngày sinh</label>
+                                        <input formControlName="userBirthdate" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            
+    
+                <div class="p-6 border rounded-lg border-default-200 mb-6">
+                    <div>
+                        <h4 class="text-xl font-medium text-default-900 mb-4">Thay đổi mật khẩu</h4>
+    
+                        <!-- <div class="mb-4" data-x-password>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="current_password">Current Password</label>
+                            <div class="flex">
+                                <input type="password" id="current_password" class="form-password block w-full rounded-s-full py-2.5 px-4 bg-transparent border border-default-200 focus:ring-transparent focus:border-default-200" type="password" placeholder="Enter your password">
+                                <button id="current_password" class="password-toggle inline-flex items-center justify-center py-2.5 px-4 border rounded-e-full bg-transparent -ms-px border-default-200">
+                                    <i class="password-eye-on h-5 w-5 text-default-600" data-lucide="eye"></i>
+                                    <i class="password-eye-off h-5 w-5 text-default-600" data-lucide="eye-off"></i>
+                                </button>
+                            </div>
+                        </div> -->
+    
+                        <div class="mb-4" data-x-password>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="new_password">Mật khẩu mới</label>
+                            <div class="flex">
+                                <input type="password" formControlName="password" class="form-password block w-full rounded-s-full py-2.5 px-4 bg-transparent border border-default-200 focus:ring-transparent focus:border-default-200" type="password" placeholder="Enter your password">
+                                <button id="new_password_btn" class="password-toggle inline-flex items-center justify-center py-2.5 px-4 border rounded-e-full bg-transparent -ms-px border-default-200">
+                                    <i class="password-eye-on h-5 w-5 text-default-600" data-lucide="eye"></i>
+                                    <i class="password-eye-off h-5 w-5 text-default-600" data-lucide="eye-off"></i>
+                                </button>
+                                <p class="pl-3 mt-2 text-sm text-red-600"  *ngIf="dataForm.get('password')?.errors && dataForm.get('password')?.touched">
+                                    <span>{{dataForm.controls['password'].errors?.['params']}}</span>
+                                </p>
+                            </div>
+                        </div>
+    
+                        <div class="mb-4" data-x-password>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="confirm_password">Xác nhận mật khẩu</label>
+                            <div class="flex">
+                                <input type="password" formControlName="confirmPassword" class="form-password block w-full rounded-s-full py-2.5 px-4 bg-transparent border border-default-200 focus:ring-transparent focus:border-default-200" type="password" placeholder="Enter your password">
+                                <button id="confirm_password_btn" class="password-toggle inline-flex items-center justify-center py-2.5 px-4 border rounded-e-full bg-transparent -ms-px border-default-200">
+                                    <i class="password-eye-on h-5 w-5 text-default-600" data-lucide="eye"></i>
+                                    <i class="password-eye-off h-5 w-5 text-default-600" data-lucide="eye-off"></i>
+                                </button>
+                                <p class="pl-3 mt-2 text-sm text-red-600"  *ngIf="dataForm.errors?.['code'] === 'ER017' && dataForm.get('confirmPassword')?.touched">
+                                    <span>{{dataForm.errors?.['params']}}</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="flex items-center justify-center gap-2 rounded-full border border-primary bg-primary px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:border-primary-700 hover:bg-primary-500">
+                                Lưu thay đổi</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <!-- End Content -->

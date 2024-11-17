@@ -46,39 +46,39 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> -->
 
             <li class="menu-item">
-                <a href="javascript:void(0)" data-hs-collapse="#menuCustomers" class="hs-collapse-toggle flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
-                    <i data-lucide="users" class="w-5 h-5"></i>
-                    Customers
-                    <i data-lucide="chevron-down" class="w-4 h-4 ms-auto transition-all hs-collapse-open:rotate-180"></i>
+                <a  (click)="toggleMenu('menuUser')" data-hs-collapse="#menuCustomers" class="hs-collapse-toggle flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
+                    <i class="fa-solid fa-users"></i>
+                    Quản lý nhân viên
+                    <i [ngClass]="{'rotate-180': isMenuOpen('menuUser')}" class="fa-solid fa-chevron-up w-4 h-4 ms-auto transition-all hs-collapse-open:rotate-180"></i>
                 </a>
 
-                <div id="menuCustomers" class="hs-collapse w-full overflow-hidden transition-[height] duration-300 hidden">
+                <div [ngClass]="{'hidden': !isMenuOpen('menuUser')}" class="hs-collapse w-full overflow-hidden transition-[height] duration-300 hidden">
                     <ul class="space-y-2 mt-2">
                         <li class="menu-item">
                             <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-customers-list.html">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Customers List
+                                <i class="fa-solid fa-angle-right w-6"></i>
+                                Danh sách nhân viên
                             </a>
                         </li>
                         <li class="menu-item">
                             <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-customers-details.html">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Customers Details
+                                <i class="fa-solid fa-angle-right w-6"></i>
+                                Thông tin chi tiết nhân viên
                             </a>
                         </li>
                         <li class="menu-item">
                             <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-customers-add.html">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Customers Add
+                                <i class="fa-solid fa-angle-right w-6"></i>
+                                Thêm nhân viên
                             </a>
                         </li>
                         <li class="menu-item">
                             <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-customers-edit.html">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Customers Edit
+                                <i class="fa-solid fa-angle-right w-6"></i>
+                                Chỉnh sửa thông tin
                             </a>
                         </li>
                     </ul>
@@ -86,74 +86,69 @@
             </li>
 
             <li class="menu-item">
-                <a href="javascript:void(0)" data-hs-collapse="#menuRestaurants" class="hs-collapse-toggle flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
-                    <i data-lucide="hotel" class="w-5 h-5"></i>
-                    Restaurants
-                    <i data-lucide="chevron-down" class="w-4 h-4 ms-auto transition-all hs-collapse-open:rotate-180"></i>
+                <a (click)="toggleMenu('menuCollection')" class="cursor-pointer hs-collapse-toggle flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Loại sản phẩm
+                    <i [ngClass]="{'rotate-180': isMenuOpen('menuCollection')}" class="fa-solid fa-chevron-up w-4 h-4 ms-auto transition-all hs-collapse-open:rotate-180"></i>
                 </a>
 
-                <div id="menuRestaurants" class="hs-collapse w-full overflow-hidden transition-[height] duration-300 hidden">
+                <div [ngClass]="{'hidden': !isMenuOpen('menuCollection')}" class="hs-collapse w-full overflow-hidden transition-[height] duration-300 hidden">
                     <ul class="space-y-2 mt-2">
                         <li class="menu-item">
                             <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-restaurants-list.html">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Restaurants List
+                                <i class="fa-solid fa-angle-right w-6"></i>
+                                Danh sách loại sản phẩm
                             </a>
                         </li>
                         <li class="menu-item">
                             <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-restaurants-details.html">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Restaurants Details
+                                <i class="fa-solid fa-angle-right w-6"></i>
+                                Chi tiết loại sản phẩm
                             </a>
                         </li>
                         <li class="menu-item">
                             <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-restaurants-add.html">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Restaurants Add
+                                <i class="fa-solid fa-angle-right w-6"></i>
+                                Thêm loại sản phẩm
                             </a>
                         </li>
                         <li class="menu-item">
                             <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-restaurants-edit.html">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Restaurants Edit
+                                <i class="fa-solid fa-angle-right w-6"></i>
+                                Chỉnh sửa loại sản phẩm
                             </a>
                         </li>
                     </ul>
                 </div>
-            </li> -->
+            </li>
 
             <li class="menu-item">
-                <a (click)="toggleMenu()"
+                <a (click)="toggleMenu('menuProducts')"
                     class="cursor-pointer hs-collapse-toggle flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
-                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    <!-- <i data-lucide="shopping-bag" class="w-5 h-5"></i> -->
+                    <i class="fa-solid fa-bag-shopping"></i>
                         Sản phẩm
-                    <i class="fa-solid fa-chevron-up" [ngClass]="{'rotate-180': isMenuOpen}"></i>
+                    <i [ngClass]="{'rotate-180': isMenuOpen('menuProducts')}" class="fa-solid fa-chevron-up w-4 h-4 ms-auto transition-all hs-collapse-open:rotate-180"></i>
                 </a>
             
                 <div id="menuProduct" class="hs-collapse w-full overflow-hidden transition-[height] duration-300" 
-                    [ngClass]="{'hidden': !isMenuOpen}">
+                [ngClass]="{'hidden': !isMenuOpen('menuProducts')}">
                     <ul class="space-y-2 mt-2">
                         <li class="menu-item">
                             <a (click)="navigationProduct()" class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100 cursor-pointer" >
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Product List
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100 cursor-pointer">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Product Details
+                                <i class="fa-solid fa-angle-right w-6"></i>
+                                Danh sách
                             </a>
                         </li>
                         <li class="menu-item">
                             <a (click)="navigationProductAdd()" class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100 cursor-pointer">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
-                                Product Add
+                                <i class="fa-solid fa-angle-right w-6"></i>
+                                Thêm sản phẩm
                             </a>
                         </li>
                         <li class="menu-item">
                             <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-product-edit.html">
-                                <i data-lucide="dot" class="w-6 h-6"></i>
+                                <i class="fa-solid fa-angle-right w-6"></i>
                                 Product Edit
                             </a>
                         </li>

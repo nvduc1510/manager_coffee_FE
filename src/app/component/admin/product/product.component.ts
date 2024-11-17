@@ -7,6 +7,7 @@ import { CollectionsService } from '../../../service/collections.service';
 import { ProductService } from '../../../service/product.service';
 import { CommonModule } from '@angular/common';
 import { TokenUtils } from '../../../shared/utils/token.utils';
+import { NavigationService } from '../../../service/navigation.service';
 
 @Component({
   selector: 'app-product',
@@ -21,12 +22,16 @@ export class ProductComponent {
     // private router : Router,
     // private elementRef : ElementRef,
     private collectionService : CollectionsService,
-    private productService : ProductService
+    private productService : ProductService,
+    private navigationService : NavigationService
   ){}
    // Tạo biến
   searchForm !: FormGroup;
   errorMessage !: string;
+  successMessage !: string;
   totalRecords : any;
+
+  isAdmin : any;
 
   //user
   userLogging : any;
@@ -113,9 +118,43 @@ export class ProductComponent {
       if (decodedToken) {
         this.userLogging = decodedToken.user.userId;
         this.userName = decodedToken.user.userFullName;
+        this.isAdmin = decodedToken.user.userRole.userRoleId === 1;
       } else {
         console.error('Invalid token or unable to decode.');
       }
     }
+  }
+
+  deleteProduct(productId : number) : void {
+    this.productService.deleteProduct(productId).subscribe({
+      next: (data : any) => {
+        this.successMessage = data.message;
+        alert(this.successMessage);
+        window.location.reload();
+      }, error : (err : any) => {
+        this.errorMessage = err.message;
+        alert(this.errorMessage);
+        window.location.reload();
+      }
+    })
+  }
+
+  isConfirmDialogOpen = false;
+  selectedProductId: number | null = null;
+
+  openConfirmDialog(productId: number) {
+    this.selectedProductId = productId;
+    this.isConfirmDialogOpen = true;
+  }
+
+  closeConfirmDialog() {
+    this.isConfirmDialogOpen = false;
+  }
+
+  navigationProductAdd() : void {
+    this.navigationService.navigationProductAdd();
+  }
+  navigationProDetail(productId : number) : void {
+    this.navigationService.navigationProductDetail(productId); 
   }
 }
