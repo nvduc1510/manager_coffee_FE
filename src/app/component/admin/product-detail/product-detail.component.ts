@@ -9,6 +9,7 @@ import { Product } from '../../../model/Product';
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup } from '@angular/forms';
 import { CommonService } from '../../../service/common.service';
+import { UpdateProduct } from '../../../model/updateProduct';
 
 @Component({
   selector: 'app-product-detail',
@@ -20,9 +21,15 @@ import { CommonService } from '../../../service/common.service';
 export class ProductDetailComponent {
   //Tạo biến
   productId !: number;
-  product !: Product;
-  
+  product !: UpdateProduct;
   dataForm !: FormGroup;
+
+  //message
+  successMessage !: string;
+  errMessage !: string;
+
+  //url
+  imgUrl = "../../../../assets/images/product/";
 
   constructor(
     private navigationService : NavigationService,
@@ -65,9 +72,21 @@ export class ProductDetailComponent {
     })
   }
 
-  updateProduct(productId : string) : void {
+  updateProduct() : void {
     if (this.dataForm.valid) {
-      const productDate = this.dataForm.value;
+      const productData = this.dataForm.value;
+      this.productService.updateProduct(this.productId, productData).subscribe({
+        next : (res : any) => {
+          this.successMessage = res.message;
+          alert(this.successMessage);
+          window.location.reload();
+        }, error: error => {
+          if (error?.message) {
+            this.errMessage = error.message;
+            alert(this.errMessage);
+          }
+        }
+      })
 
     }
 

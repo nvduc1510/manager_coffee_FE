@@ -110,15 +110,15 @@ export class ProfileComponent {
         if (data?.params) {
           this.users = data.params;
           this.dataForm.patchValue(this.users);
-          console.log("data:  " + JSON.stringify(this.users));
+          // console.log("data:  " + JSON.stringify(this.users));
           
-          this.userFullName = this.users.userFullName;
-          this.username = this.users.username;
-          this.email = this.users.email;
-          this.userSex = this.users.userSex;
-          this.userBirthdate = this.users.userBirthdate;
-          this.userAddress = this.users.userAddress;
-          this.userRoleName = this.users.userRoleName;
+          // this.userFullName = this.users.userFullName;
+          // this.username = this.users.username;
+          // this.email = this.users.email;
+          // this.userSex = this.users.userSex;
+          // this.userBirthdate = this.users.userBirthdate;
+          // this.userAddress = this.users.userAddress;
+          // this.userRoleName = this.users.userRoleName;
           
         }
       },

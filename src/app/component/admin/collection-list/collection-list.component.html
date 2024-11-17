@@ -1,0 +1,241 @@
+<main>
+
+    <app-admin-topbar />
+
+    <app-admin-menu />
+
+    <!-- Start Content -->
+    <div class="w-full lg:ps-64">
+        <div class="p-6 page-content">
+            <div class="grid grid-cols-1">
+                <div class="border rounded-lg border-default-200">
+                    <div class="px-6 py-4 overflow-hidden ">
+                        <div class="flex flex-wrap md:flex-nowrap items-center justify-between gap-4">
+                            <h2 class="text-xl text-default-800 font-semibold">Danh sách loại đồ uống</h2>
+
+                            <div class="flex flex-wrap items-center gap-4">
+                                <a href="admin-product-add.html" class="py-2.5 px-4 inline-flex rounded-lg text-sm font-medium bg-primary text-white transition-all hover:bg-primary-500">Thêm loại đồ uống</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-x-auto">
+                        <div class="min-w-full inline-block align-middle">
+                            <div class="overflow-hidden">
+                                <table class="min-w-full divide-y divide-default-200">
+                                    <thead class="bg-default-100">
+                                        <tr class="text-start">
+                                            <th class="px-6 py-3 text-start text-sm whitespace-nowrap font-medium text-default-800">Product</th>
+                                            <th class="px-6 py-3 text-start text-sm whitespace-nowrap font-medium text-default-800">Type</th>
+                                            <th class="px-6 py-3 text-start text-sm whitespace-nowrap font-medium text-default-800">Price</th>
+                                            <th class="px-6 py-3 text-start text-sm whitespace-nowrap font-medium text-default-800">Quantity</th>
+                                            <th class="px-6 py-3 text-start text-sm whitespace-nowrap font-medium text-default-800">Create By</th>
+                                            <th class="px-6 py-3 text-start text-sm whitespace-nowrap font-medium text-default-800">Status</th>
+                                            <th class="px-6 py-3 text-start text-sm whitespace-nowrap font-medium text-default-800">Action</th>
+                                        </tr><!-- end table-head-row -->
+                                    </thead><!-- end t-head -->
+                                    <tbody class="divide-y divide-default-200">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-800">
+                                                <a href="admin-product-details.html" class="flex items-center gap-3">
+                                                    <div class="shrink">
+                                                        <img src="assets/images/dishes/small/pizza.png" class="h-12 w-12">
+                                                    </div>
+                                                    <p class="text-base text-default-500 transition-all hover:text-primary">Veg Pizza</p>
+                                                </a>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Italian</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">$45</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">80</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Admin</td>
+                                            <td class="px-6 py-4">
+                                                <span class="inline-flex items-center gap-1 py-0.5 px-2.5 rounded-full text-xs font-medium bg-green-500/20 text-green-500">Publish</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="flex gap-3">
+                                                    <a href="admin-product-edit.html" class="transition-all hover:text-primary"><i data-lucide="pencil" class="w-5 h-5"></i></a>
+                                                    <a href="admin-product-details.html" class="transition-all hover:text-primary"><i data-lucide="eye" class="w-5 h-5"></i></a>
+                                                    <a href="javascript:void(0)" class="transition-all hover:text-red-500"><i data-lucide="trash-2" class="w-5 h-5"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-800">
+                                                <a href="admin-product-details.html" class="flex items-center gap-3">
+                                                    <div class="shrink">
+                                                        <img src="assets/images/dishes/small/bbq.png" class="h-12 w-12">
+                                                    </div>
+                                                    <p class="text-base text-default-500 transition-all hover:text-primary">Paneer BBQ</p>
+                                                </a>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">BBQ</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">$40</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">75</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Admin</td>
+                                            <td class="px-6 py-4">
+                                                <span class="inline-flex items-center gap-1 py-0.5 px-2.5 rounded-full text-xs font-medium bg-green-500/20 text-green-500">Publish</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="flex gap-3">
+                                                    <a href="admin-product-edit.html" class="transition-all hover:text-primary"><i data-lucide="pencil" class="w-5 h-5"></i></a>
+                                                    <a href="admin-product-details.html" class="transition-all hover:text-primary"><i data-lucide="eye" class="w-5 h-5"></i></a>
+                                                    <a href="javascript:void(0)" class="transition-all hover:text-red-500"><i data-lucide="trash-2" class="w-5 h-5"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-800">
+                                                <a href="admin-product-details.html" class="flex items-center gap-3">
+                                                    <div class="shrink">
+                                                        <img src="assets/images/dishes/small/bread.png" class="h-12 w-12">
+                                                    </div>
+                                                    <p class="text-base text-default-500 transition-all hover:text-primary">Bread</p>
+                                                </a>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Italian</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">$10</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">120</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Admin</td>
+                                            <td class="px-6 py-4">
+                                                <span class="inline-flex items-center gap-1 py-0.5 px-2.5 rounded-full text-xs font-medium bg-green-500/20 text-green-500">Publish</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="flex gap-3">
+                                                    <a href="admin-product-edit.html" class="transition-all hover:text-primary"><i data-lucide="pencil" class="w-5 h-5"></i></a>
+                                                    <a href="admin-product-details.html" class="transition-all hover:text-primary"><i data-lucide="eye" class="w-5 h-5"></i></a>
+                                                    <a href="javascript:void(0)" class="transition-all hover:text-red-500"><i data-lucide="trash-2" class="w-5 h-5"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-800">
+                                                <a href="admin-product-details.html" class="flex items-center gap-3">
+                                                    <div class="shrink">
+                                                        <img src="assets/images/dishes/small/cooki.png" class="h-12 w-12">
+                                                    </div>
+                                                    <p class="text-base text-default-500 transition-all hover:text-primary">Cookies Bisticks </p>
+                                                </a>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Cooki</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">$10</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">90</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Admin</td>
+                                            <td class="px-6 py-4">
+                                                <span class="inline-flex items-center gap-1 py-0.5 px-2.5 rounded-full text-xs font-medium bg-red-500/20 text-red-500">Draft</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="flex gap-3">
+                                                    <a href="admin-product-edit.html" class="transition-all hover:text-primary"><i data-lucide="pencil" class="w-5 h-5"></i></a>
+                                                    <a href="admin-product-details.html" class="transition-all hover:text-primary"><i data-lucide="eye" class="w-5 h-5"></i></a>
+                                                    <a href="javascript:void(0)" class="transition-all hover:text-red-500"><i data-lucide="trash-2" class="w-5 h-5"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-800">
+                                                <a href="admin-product-details.html" class="flex items-center gap-3">
+                                                    <div class="shrink">
+                                                        <img src="assets/images/dishes/small/rice.png" class="h-12 w-12">
+                                                    </div>
+                                                    <p class="text-base text-default-500 transition-all hover:text-primary">Veg Rice</p>
+                                                </a>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Italian</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">$25</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">40</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Admin</td>
+                                            <td class="px-6 py-4">
+                                                <span class="inline-flex items-center gap-1 py-0.5 px-2.5 rounded-full text-xs font-medium bg-green-500/20 text-green-500">Publish</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="flex gap-3">
+                                                    <a href="admin-product-edit.html" class="transition-all hover:text-primary"><i data-lucide="pencil" class="w-5 h-5"></i></a>
+                                                    <a href="admin-product-details.html" class="transition-all hover:text-primary"><i data-lucide="eye" class="w-5 h-5"></i></a>
+                                                    <a href="javascript:void(0)" class="transition-all hover:text-red-500"><i data-lucide="trash-2" class="w-5 h-5"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-800">
+                                                <a href="admin-product-details.html" class="flex items-center gap-3">
+                                                    <div class="shrink">
+                                                        <img src="assets/images/dishes/small/salad.png" class="h-12 w-12">
+                                                    </div>
+                                                    <p class="text-base text-default-500 transition-all hover:text-primary">Salad</p>
+                                                </a>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">salad</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">$20</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">45</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Admin</td>
+                                            <td class="px-6 py-4">
+                                                <span class="inline-flex items-center gap-1 py-0.5 px-2.5 rounded-full text-xs font-medium bg-red-500/20 text-red-500">Draft</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="flex gap-3">
+                                                    <a href="admin-product-edit.html" class="transition-all hover:text-primary"><i data-lucide="pencil" class="w-5 h-5"></i></a>
+                                                    <a href="admin-product-details.html" class="transition-all hover:text-primary"><i data-lucide="eye" class="w-5 h-5"></i></a>
+                                                    <a href="javascript:void(0)" class="transition-all hover:text-red-500"><i data-lucide="trash-2" class="w-5 h-5"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-800">
+                                                <a href="admin-product-details.html" class="flex items-center gap-3">
+                                                    <div class="shrink">
+                                                        <img src="assets/images/dishes/small/pizza-2.png" class="h-12 w-12">
+                                                    </div>
+                                                    <p class="text-base text-default-500 transition-all hover:text-primary">Mushroom Pizza</p>
+                                                </a>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Italian</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">$50</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">20</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Admin</td>
+                                            <td class="px-6 py-4">
+                                                <span class="inline-flex items-center gap-1 py-0.5 px-2.5 rounded-full text-xs font-medium bg-green-500/20 text-green-500">Publish</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="flex gap-3">
+                                                    <a href="admin-product-edit.html" class="transition-all hover:text-primary"><i data-lucide="pencil" class="w-5 h-5"></i></a>
+                                                    <a href="admin-product-details.html" class="transition-all hover:text-primary"><i data-lucide="eye" class="w-5 h-5"></i></a>
+                                                    <a href="javascript:void(0)" class="transition-all hover:text-red-500"><i data-lucide="trash-2" class="w-5 h-5"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-800">
+                                                <a href="admin-product-details.html" class="flex items-center gap-3">
+                                                    <div class="shrink">
+                                                        <img src="assets/images/dishes/burrito-bowl.png" class="h-12 w-12">
+                                                    </div>
+                                                    <p class="text-base text-default-500 transition-all hover:text-primary">Burrito Bowl</p>
+                                                </a>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Mexican</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">$45</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">80</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-500">Admin</td>
+                                            <td class="px-6 py-4">
+                                                <span class="inline-flex items-center gap-1 py-0.5 px-2.5 rounded-full text-xs font-medium bg-green-500/20 text-green-500">Publish</span>
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="flex gap-3">
+                                                    <a href="admin-product-edit.html" class="transition-all hover:text-primary"><i data-lucide="pencil" class="w-5 h-5"></i></a>
+                                                    <a href="admin-product-details.html" class="transition-all hover:text-primary"><i data-lucide="eye" class="w-5 h-5"></i></a>
+                                                    <a href="javascript:void(0)" class="transition-all hover:text-red-500"><i data-lucide="trash-2" class="w-5 h-5"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                    </tbody><!-- end t-body -->
+                                </table><!-- end table -->
+                            </div><!-- end overflo-hidden -->
+                        </div><!-- end table-responsive -->
+                    </div>
+                </div>
+            </div><!-- end grid -->
+        </div>
+    </div>
+    <!-- End Content -->
+     <app-footer />
+</main>

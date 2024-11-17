@@ -49,7 +49,7 @@
             </li> -->
 
             <li class="menu-item">
-                <a  (click)="toggleMenu('menuUser')" data-hs-collapse="#menuCustomers" class="hs-collapse-toggle flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
+                <a  (click)="toggleMenu('menuUser')" data-hs-collapse="#menuCustomers" class="cursor-pointer hs-collapse-toggle flex items-center gap-x-3.5 py-3 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
                     <i class="fa-solid fa-users"></i>
                     Quản lý nhân viên
                     <i [ngClass]="{'rotate-180': isMenuOpen('menuUser')}" class="fa-solid fa-chevron-up w-4 h-4 ms-auto transition-all hs-collapse-open:rotate-180"></i>
@@ -58,25 +58,19 @@
                 <div [ngClass]="{'hidden': !isMenuOpen('menuUser')}" class="hs-collapse w-full overflow-hidden transition-[height] duration-300 hidden">
                     <ul class="space-y-2 mt-2">
                         <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-customers-list.html">
+                            <a (click)="navigationUserList()" class=" cursor-pointer flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
                                 <i class="fa-solid fa-angle-right w-6"></i>
                                 Danh sách nhân viên
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-customers-details.html">
-                                <i class="fa-solid fa-angle-right w-6"></i>
-                                Thông tin chi tiết nhân viên
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-customers-add.html">
+                            <a (click)="navigationUserAdd()" class="cursor-pointer flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
                                 <i class="fa-solid fa-angle-right w-6"></i>
                                 Thêm nhân viên
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-customers-edit.html">
+                            <a (click)="navigationUserEdit()" class="cursor-pointer flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
                                 <i class="fa-solid fa-angle-right w-6"></i>
                                 Chỉnh sửa thông tin
                             </a>
@@ -95,25 +89,19 @@
                 <div [ngClass]="{'hidden': !isMenuOpen('menuCollection')}" class="hs-collapse w-full overflow-hidden transition-[height] duration-300 hidden">
                     <ul class="space-y-2 mt-2">
                         <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-restaurants-list.html">
+                            <a (click)="navigationCollectionList()" class="cursor-pointer flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
                                 <i class="fa-solid fa-angle-right w-6"></i>
                                 Danh sách loại sản phẩm
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-restaurants-details.html">
-                                <i class="fa-solid fa-angle-right w-6"></i>
-                                Chi tiết loại sản phẩm
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-restaurants-add.html">
+                            <a (click)="navigationCollectionAdd()" class=" cursor-pointer flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
                                 <i class="fa-solid fa-angle-right w-6"></i>
                                 Thêm loại sản phẩm
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a class="flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100" href="admin-restaurants-edit.html">
+                            <a (click)="navigationCollectionEdit()" class="cursor-pointer flex items-center gap-x-2.5 py-2 px-4 text-sm text-default-700 rounded-md hover:bg-default-100">
                                 <i class="fa-solid fa-angle-right w-6"></i>
                                 Chỉnh sửa loại sản phẩm
                             </a>

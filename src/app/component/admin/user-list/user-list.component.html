@@ -1,0 +1,279 @@
+
+
+<main>
+    <app-admin-topbar />
+    <app-admin-menu />
+
+    <!-- Start Content -->
+    <div class="w-full lg:ps-64">
+        <div class="p-6 page-content">
+
+            <div class="rounded-lg border border-default-200">
+                <div class="p-6">
+                    <div class="flex flex-wrap justify-between items-center gap-4">
+                        <div class="relative lg:flex hidden">
+                            <input type="search" class="ps-12 pe-4 py-2.5 block w-64 bg-default-50/0 text-default-600 border-default-200 rounded-lg text-sm focus:border-primary focus:ring-primary" placeholder="Search...">
+                            <span class="absolute start-4 top-2.5">
+                                <i data-lucide="search" class="w-5 h-5 text-default-600"></i>
+                            </span>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-2">
+
+                            <a href="admin-customers-add.html" class="px-6 py-2.5 inline-flex text-white text-sm rounded-md bg-primary ">
+                                <i data-lucide="plus" class="w-5 h-5 inline-flex align-middle me-2"></i>
+                                Thêm mới nhân viên
+                            </a>
+
+                            <div class="hs-dropdown relative inline-flex">
+                                <button type="button" class="hs-dropdown-toggle flex items-center gap-2 font-medium text-default-700 text-sm py-2.5 px-4 xl:px-5 rounded-md bg-default-100 transition-all">
+                                    Filter <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                                </button><!-- end dropdown button -->
+
+                                <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 min-w-[200px] transition-[opacity,margin] mt-4 opacity-0 hidden z-20 bg-white shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg border border-default-100 p-1.5 dark:bg-default-50">
+                                    <ul class="flex flex-col gap-1">
+                                        <li><a class="flex items-center gap-3 font-normal py-2 px-3 transition-all text-default-700 bg-default-100 rounded" href="javascript:void(0)">All</a></li>
+                                        <li><a class="flex items-center gap-3 font-normal text-default-600 py-2 px-3 transition-all hover:text-default-700 hover:bg-default-100 rounded" href="javascript:void(0)">Refund</a></li>
+                                        <li><a class="flex items-center gap-3 font-normal text-default-600 py-2 px-3 transition-all hover:text-default-700 hover:bg-default-100 rounded" href="javascript:void(0)">Paid</a></li>
+                                        <li><a class="flex items-center gap-3 font-normal text-default-600 py-2 px-3 transition-all hover:text-default-700 hover:bg-default-100 rounded" href="javascript:void(0)">Cancel</a></li>
+                                    </ul><!-- end dropdown items -->
+                                </div><!-- end dropdown menu -->
+                            </div>
+
+                            <div class="relative">
+                                <span class="absolute top-1/2 start-2.5 -translate-y-1/2"><i data-lucide="calendar-days" class="h-4 w-4 text-default-700"></i></span>
+                                <span class="absolute top-1/2 end-2.5 -translate-y-1/2"><i data-lucide="chevron-down" class="h-4 w-4 text-default-700"></i></span>
+                                <input type="text" class="py-2.5 w-40 px-9 block bg-default-100 rounded-md border-0 text-sm text-default-700 font-medium focus:border-default-200 focus:ring-0" id="datepicker-basic">
+                            </div><!-- end relative -->
+
+                            <div class="hs-dropdown relative inline-flex">
+                                <button type="button" class="hs-dropdown-toggle flex items-center gap-2 font-medium text-default-700 text-sm py-2.5 px-4 xl:px-5 rounded-md bg-default-100 transition-all">
+                                    All Action <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                                </button><!-- end dropdown button -->
+
+                                <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 min-w-[200px] transition-[opacity,margin] mt-4 opacity-0 hidden z-20 bg-white shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg border border-default-100 p-1.5 dark:bg-default-50">
+                                    <ul class="flex flex-col gap-1">
+                                        <li><a class="flex items-center gap-3 font-normal py-2 px-3 transition-all text-default-700 bg-default-100 rounded" href="javascript:void(0)">All</a></li>
+                                        <li><a class="flex items-center gap-3 font-normal text-default-600 py-2 px-3 transition-all hover:text-default-700 hover:bg-default-100 rounded" href="javascript:void(0)">Refund</a></li>
+                                        <li><a class="flex items-center gap-3 font-normal text-default-600 py-2 px-3 transition-all hover:text-default-700 hover:bg-default-100 rounded" href="javascript:void(0)">Paid</a></li>
+                                        <li><a class="flex items-center gap-3 font-normal text-default-600 py-2 px-3 transition-all hover:text-default-700 hover:bg-default-100 rounded" href="javascript:void(0)">Cancel</a></li>
+                                    </ul><!-- end dropdown items -->
+                                </div><!-- end dropdown menu -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative overflow-x-auto border-t border-default-200">
+                    <div class="min-w-full inline-block align-middle">
+                        <div class="overflow-hidden">
+                            <table class="min-w-full divide-y divide-default-200">
+                                <thead class="bg-default-100">
+                                    <tr>
+                                        <th scope="col" class="px-6 py-4 max-w-[1rem]">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-all" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 text-primary rounded bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-all" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="px-6 py-4 text-start whitespace-nowrap text-sm font-medium text-default-500">Customer Name</th>
+                                        <th scope="col" class="px-6 py-4 text-start whitespace-nowrap text-sm font-medium text-default-500">Email</th>
+                                        <th scope="col" class="px-6 py-4 text-start whitespace-nowrap text-sm font-medium text-default-500">Phone</th>
+                                        <th scope="col" class="px-6 py-4 text-start whitespace-nowrap text-sm font-medium text-default-500">Orders</th>
+                                        <th scope="col" class="px-6 py-4 text-start whitespace-nowrap text-sm font-medium text-default-500">Order Total</th>
+                                        <th scope="col" class="px-6 py-4 text-start whitespace-nowrap text-sm font-medium text-default-500">Customer Since</th>
+                                        <th scope="col" class="px-6 py-4 text-start whitespace-nowrap text-sm font-medium text-default-500">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-default-200">
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-1" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 rounded text-primary bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-1" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Paityn Herwitz</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">wlopez.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">739-813-1211</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">17</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">$ 662.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Apr 02 2023 | <span class="text-xs">02:05:36</span> </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-3 py-1 text-xs font-medium rounded-md bg-green-500/10 text-green-500">Active</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-1" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 text-primary rounded bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-1" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Randy Siphron</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">lwhite.icloud.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">895-528-6760</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">03</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">$ 448.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Jan 17 2023 | <span class="text-xs">06:35:32</span> </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-3 py-1 text-xs font-medium rounded-md bg-red-500/10 text-red-500">Block</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-1" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 text-primary rounded bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-1" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Livia Kenter</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">cbaker.hotmail.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">759-215-8839</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">07</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">$ 941.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Dec 29 2020 | <span class="text-xs">13:09:57</span> </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-3 py-1 text-xs font-medium rounded-md bg-green-500/10 text-green-500">Active</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-1" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 text-primary rounded bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-1" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Ann Vetrovs</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">htaylor.aol.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">801-740-7902</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">06</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">$ 133.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Dec 16 2016 | <span class="text-xs">20:14:39</span> </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-3 py-1 text-xs font-medium rounded-md bg-green-500/10 text-green-500">Active</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-1" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 text-primary rounded bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-1" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Roger Korsgaard</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">ksmith.yahoo.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">705-498-5991</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">02</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">$ 824.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Aug 26 2023 | <span class="text-xs">10:34:09</span> </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-3 py-1 text-xs font-medium rounded-md bg-green-500/10 text-green-500">Active</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-1" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 text-primary rounded bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-1" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Ruben Calzoni</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">qdavis.mail.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">855-338-4990</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">13</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">$ 238.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Jul 19 2023 | <span class="text-xs">16:48:10</span> </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-3 py-1 text-xs font-medium rounded-md bg-red-500/10 text-red-500">Block</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-1" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 text-primary rounded bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-1" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Talan Dokidis</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">rgarcia.hotmail.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">348-508-9895</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">14</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">$ 679.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Sep 14 2021 | <span class="text-xs">20:24:37</span> </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-3 py-1 text-xs font-medium rounded-md bg-red-500/10 text-red-500">Block</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-1" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 text-primary rounded bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-1" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Carter George</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">bwhite.mail.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">422-949-1555</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">06</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">$ 979.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Oct 09 2019 | <span class="text-xs">10:16:48</span> </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-3 py-1 text-xs font-medium rounded-md bg-green-500/10 text-green-500">Active</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-1" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 text-primary rounded bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-1" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Marilyn Stanton</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">ngeorge.aol.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">516-243-5018</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">15</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">$ 959.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Oct 16 2023 | <span class="text-xs">03:49:38</span> </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-3 py-1 text-xs font-medium rounded-md bg-red-500/10 text-red-500">Block</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="flex items-center h-5">
+                                                <input id="hs-table-search-checkbox-1" type="checkbox" class="form-checkbox h-5 w-5 border border-default-300 text-primary rounded bg-transparent focus:border-primary-300 focus:ring focus:ring-offset-0 focus:ring-primary-200 focus:ring-opacity-50">
+                                                <label for="hs-table-search-checkbox-1" class="sr-only">Checkbox</label>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Emerson Dokidis</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">hscott.mail.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">575-541-4842</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">14</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">$ 948.00</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-base text-default-800">Apr 10 2018 | <span class="text-xs">13:51:30</span> </td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <span class="px-3 py-1 text-xs font-medium rounded-md bg-green-500/10 text-green-500">Active</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- end overflo-hidden -->
+                    </div><!-- end table-responsive -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+    <app-footer />
+    <script src="../../../../assets/js/admin-customers-list.js" type="module"></script>
+
+</main>

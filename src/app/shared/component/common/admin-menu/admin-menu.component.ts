@@ -46,5 +46,30 @@ export class AdminMenuComponent {
     this.navigationService.navigationProductAdd();
   }
 
+  navigationUserAdd() : void {
+    this.navigationService.navigationUserAdd();
+  }
+
+  navigationUserList() : void {
+    this.navigationService.navigationUserList();
+  }
+
+  navigationUserEdit() : void {
+    this.navigationService.navigationUserEdit();
+  }
+
+  navigationCollectionList(): void {
+    this.navigationService.navigationCollectionList();
+  }
+
+  navigationCollectionAdd(): void {
+    this.navigationService.navigationCollectionAdd();
+  }
+
+
+
+  navigationCollectionEdit(): void {
+    this.navigationService.navigationCollectionEdit();
+  }
 
 }

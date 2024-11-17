@@ -1,0 +1,105 @@
+
+<main>
+
+    <app-admin-topbar />
+    <app-admin-menu />
+    <!-- Start Content -->
+    <div class="w-full lg:ps-64">
+        <div class="p-6 page-content">
+            <div class="border rounded-lg border-default-200">
+                <div class="p-6">
+                    <div class="grid lg:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="firstName">First Name</label>
+                            <input id="firstName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your First Name" value="Tiana">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="lastName">Last Name</label>
+                            <input id="lastName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your Last Name" value="Geidt">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="userName">User Name</label>
+                            <input id="userName" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="Enter Your User Name" value="tianageidt">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="e_mail">Email</label>
+                            <input id="e_mail" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="email" placeholder="demoexample@mail.com" value="tianageidt@mail.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="phone_number">Phone Number</label>
+                            <input id="phone_number" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="tel" placeholder="+1-123-XXX-4567" value="+1-123-999-4567">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="country">Country/Region</label>
+                            <select id="country" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                <option value="United States" selected>United States</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="China">China</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Bharat">Bharat</option>
+                                <option value="Afghanistan">Afghanistan</option>
+                                <option value="France">France</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Albania">Albania</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="state">State</label>
+                            <select id="state" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50">
+                                <option value="Alabama" selected>Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="zip_code">Zip Code</label>
+                            <input id="zip_code" class="block w-full bg-transparent rounded-full py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200 dark:bg-default-50" type="text" placeholder="35010" value="35010">
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <label class="block text-sm font-medium text-default-900 mb-2" for="description">Description</label>
+                            <textarea id="description" class="block w-full bg-transparent rounded-lg py-2.5 px-4 border border-default-200 focus:ring-transparent focus:border-default-200" rows="5" placeholder="Enter Your Last Name">Hi, I'm Kaiya Botosh, it has been the industry's standard dummy text since the 1500s when an unknown printer took a galley of type.</textarea>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end gap-4">
+                        <button class="flex items-center justify-center gap-2 rounded-full bg-primary/10 px-6 py-2.5 text-center text-sm font-semibold text-primary shadow-sm transition-all duration-200 hover:bg-primary hover:text-white">
+                            <i data-lucide="x" class="w-5 h-5"></i>
+                            Close
+                        </button>
+                        <button class="flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary-500">
+                            <i data-lucide="save" class="w-5 h-5"></i>
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <app-footer />
+
+</main>
